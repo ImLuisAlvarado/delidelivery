@@ -27,45 +27,45 @@ public class Business {
     }
 
     /**
-     * @return the adress
+     * @return the address
      */
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
     /**
-     * @param adress the adress to set
+     * @param address the address to set
      */
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     /**
-     * @return the telephoneNumber
+     * @return the phoneNumber
      */
-    public String getTelephoneNumber() {
-        return telephoneNumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     /**
-     * @param telephoneNumber the telephoneNumber to set
+     * @param phoneNumber the phoneNumber to set
      */
-    public void setTelephoneNumber(String telephoneNumber) {
-        this.telephoneNumber = telephoneNumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     /**
-     * @return the emailAdress
+     * @return the emailAddress
      */
-    public String getEmailAdress() {
-        return emailAdress;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
     /**
-     * @param emailAdress the emailAdress to set
+     * @param emailAddress the emailAddress to set
      */
-    public void setEmailAdress(String emailAdress) {
-        this.emailAdress = emailAdress;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     /**
@@ -81,9 +81,10 @@ public class Business {
     public void setDate(Date date) {
         this.date = date;
     }
+
     private String name;
-    private String adress;
-    private String telephoneNumber;
-    private String emailAdress;
+    private String address;
+    private String phoneNumber;
+    private String emailAddress;
     private Date date;
     }

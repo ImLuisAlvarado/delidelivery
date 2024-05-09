@@ -14,20 +14,6 @@ import java.util.List;
 public class Client {
 
     /**
-     * @return the productsAdquired
-     */
-    public List<Product> getProductsAdquired() {
-        return productsAdquired;
-    }
-
-    /**
-     * @param productsAdquired the productsAdquired to set
-     */
-    public void setProductsAdquired(List<Product> productsAdquired) {
-        this.productsAdquired = productsAdquired;
-    }
-
-    /**
      * @return the name
      */
     public String getName() {
@@ -42,59 +28,59 @@ public class Client {
     }
 
     /**
-     * @return the adress
+     * @return the address
      */
     public String getAddress() {
         return address;
     }
 
     /**
-     * @param adress the adress to set
+     * @param address the address to set
      */
-    public void setAddress(String adress) {
-        this.address = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     /**
-     * @return the adressReferences
+     * @return the addressReferences
      */
     public String getAddressReferences() {
         return addressReferences;
     }
 
     /**
-     * @param adressReferences the adressReferences to set
+     * @param addressReferences the addressReferences to set
      */
-    public void setAddressReferences(String adressReferences) {
-        this.addressReferences = adressReferences;
+    public void setAddressReferences(String addressReferences) {
+        this.addressReferences = addressReferences;
     }
 
     /**
-     * @return the telephoneNumber
+     * @return the phoneNumber
      */
-    public String getTelephoneNumber() {
-        return telephoneNumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     /**
-     * @param telephoneNumber the telephoneNumber to set
+     * @param phoneNumber the phoneNumber to set
      */
-    public void setTelephoneNumber(String telephoneNumber) {
-        this.telephoneNumber = telephoneNumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     /**
-     * @return the emailAdress
+     * @return the emailAddress
      */
-    public String getEmailAdress() {
-        return emailAdress;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
     /**
-     * @param emailAdress the emailAdress to set
+     * @param emailAddress the emailAddress to set
      */
-    public void setEmailAdress(String emailAdress) {
-        this.emailAdress = emailAdress;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     /**
@@ -114,7 +100,7 @@ public class Client {
     /**
      * @return the payMethod
      */
-    public String isPayMethod() {
+    public String getPayMethod() {
         return payMethod;
     }
 
@@ -124,12 +110,27 @@ public class Client {
     public void setPayMethod(String payMethod) {
         this.payMethod = payMethod;
     }
-    private List<Product> productsAdquired;
+
+    /**
+     * @return the productsAcquired
+     */
+    public List<Product> getProductsAcquired() {
+        return productsAcquired;
+    }
+
+    /**
+     * @param productsAcquired the productsAcquired to set
+     */
+    public void setProductsAcquired(List<Product> productsAcquired) {
+        this.productsAcquired = productsAcquired;
+    }
+
     private String name;
     private String address;
     private String addressReferences;
-    private String telephoneNumber;
-    private String emailAdress;
+    private String phoneNumber;
+    private String emailAddress;
     private Date date;
     private String payMethod;
+    private List<Product> productsAcquired;
 }
