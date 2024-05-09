@@ -5,6 +5,7 @@
 package mx.itson.delidelivery.entities;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -15,14 +16,14 @@ public class Client {
     /**
      * @return the productsAdquired
      */
-    public Product getProductsAdquired() {
+    public List<Product> getProductsAdquired() {
         return productsAdquired;
     }
 
     /**
      * @param productsAdquired the productsAdquired to set
      */
-    public void setProductsAdquired(Product productsAdquired) {
+    public void setProductsAdquired(List<Product> productsAdquired) {
         this.productsAdquired = productsAdquired;
     }
 
@@ -123,7 +124,7 @@ public class Client {
     public void setPayMethod(String payMethod) {
         this.payMethod = payMethod;
     }
-    private Product productsAdquired;
+    private List<Product> productsAdquired;
     private String name;
     private String adress;
     private String adressReferences;
