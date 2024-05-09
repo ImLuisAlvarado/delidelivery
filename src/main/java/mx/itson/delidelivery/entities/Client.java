@@ -44,29 +44,29 @@ public class Client {
     /**
      * @return the adress
      */
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
     /**
      * @param adress the adress to set
      */
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String adress) {
+        this.address = adress;
     }
 
     /**
      * @return the adressReferences
      */
-    public String getAdressReferences() {
-        return adressReferences;
+    public String getAddressReferences() {
+        return addressReferences;
     }
 
     /**
      * @param adressReferences the adressReferences to set
      */
-    public void setAdressReferences(String adressReferences) {
-        this.adressReferences = adressReferences;
+    public void setAddressReferences(String adressReferences) {
+        this.addressReferences = adressReferences;
     }
 
     /**
@@ -126,8 +126,8 @@ public class Client {
     }
     private List<Product> productsAdquired;
     private String name;
-    private String adress;
-    private String adressReferences;
+    private String address;
+    private String addressReferences;
     private String telephoneNumber;
     private String emailAdress;
     private Date date;
