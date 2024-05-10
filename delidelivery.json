@@ -1,14 +1,35 @@
 {
     "business":{
-
+        "name":"Carlos pequeño",
+        "address":"Blvd. Agustín García Lopez",
+        "phoneNumber":"+52 622 144 7593",
+        "emailAddress":"Carlospequeño@gmail.com"
     },
     "client":{
-        
+        "name":"Jerry",
+        "address":"Carretera Internacional Km 3",
+        "addressReferences":"En ITSON frente al aeropuerto",
+        "phoneNumber":"+52 631 123 9151",
+        "emailAddress":"jerry.jamaica240502@potros.itson.edu.mx"
     },
     "product":
-    [
+    [   
         {
-            
+            "name":"Double Cowboy Bacon",
+            "quantity":2,
+            "price":138.90
+        },
+        {
+            "name":"Stacker Over-Flow",
+            "quantity":1,
+            "price":"115.90"
         }
-    ]
+    ],
+    "order":
+    {
+        "id":"6U5K21E12L5C8E1",
+        "date":"2024-05-15T11:40:43.511Z",
+        "payMethod":"Efectivo",
+        "status":"Pendiente"
+    }
 }
