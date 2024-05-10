@@ -4,9 +4,6 @@
  */
 package mx.itson.delidelivery.entities;
 
-import java.util.Date;
-import java.util.List;
-
 /**
  *
  * @author darkheaven
@@ -82,55 +79,10 @@ public class Client {
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
-
-    /**
-     * @return the date
-     */
-    public Date getDate() {
-        return date;
-    }
-
-    /**
-     * @param date the date to set
-     */
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    /**
-     * @return the payMethod
-     */
-    public String getPayMethod() {
-        return payMethod;
-    }
-
-    /**
-     * @param payMethod the payMethod to set
-     */
-    public void setPayMethod(String payMethod) {
-        this.payMethod = payMethod;
-    }
-
-    /**
-     * @return the productsAcquired
-     */
-    public List<Product> getProductsAcquired() {
-        return productsAcquired;
-    }
-
-    /**
-     * @param productsAcquired the productsAcquired to set
-     */
-    public void setProductsAcquired(List<Product> productsAcquired) {
-        this.productsAcquired = productsAcquired;
-    }
-
+    
     private String name;
     private String address;
     private String addressReferences;
     private String phoneNumber;
     private String emailAddress;
-    private Date date;
-    private String payMethod;
-    private List<Product> productsAcquired;
 }
