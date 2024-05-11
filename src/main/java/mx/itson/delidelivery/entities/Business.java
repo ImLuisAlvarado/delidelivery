@@ -21,7 +21,7 @@ public class Business {
     }
 
     /**
-     * Stes the name of the business.
+     * Sets the name of the business.
      * @param name the name to set
      */
     public void setName(String name) {
