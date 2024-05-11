@@ -5,12 +5,13 @@
 package mx.itson.delidelivery.entities;
 
 /**
- *
- * @author darkheaven
+ * Represents a client entity
+* @author darkheaven
  */
 public class Client {
 
     /**
+     * Gets the name of the client.
      * @return the name
      */
     public String getName() {
@@ -18,6 +19,7 @@ public class Client {
     }
 
     /**
+     * Sets the name of the client.
      * @param name the name to set
      */
     public void setName(String name) {
@@ -25,6 +27,7 @@ public class Client {
     }
 
     /**
+     * Gets the address of the client.
      * @return the address
      */
     public String getAddress() {
@@ -32,6 +35,7 @@ public class Client {
     }
 
     /**
+     * Sets the address of the client.
      * @param address the address to set
      */
     public void setAddress(String address) {
@@ -39,6 +43,7 @@ public class Client {
     }
 
     /**
+     * Gets the address references of the client.
      * @return the addressReferences
      */
     public String getAddressReferences() {
@@ -46,6 +51,7 @@ public class Client {
     }
 
     /**
+     * Sets the address references of the client.
      * @param addressReferences the addressReferences to set
      */
     public void setAddressReferences(String addressReferences) {
@@ -53,6 +59,7 @@ public class Client {
     }
 
     /**
+     * Gets the phone number of the client.
      * @return the phoneNumber
      */
     public String getPhoneNumber() {
@@ -60,6 +67,7 @@ public class Client {
     }
 
     /**
+     * Sets the phone number of the client.
      * @param phoneNumber the phoneNumber to set
      */
     public void setPhoneNumber(String phoneNumber) {
@@ -67,6 +75,7 @@ public class Client {
     }
 
     /**
+     * Gets the email address of the client.
      * @return the emailAddress
      */
     public String getEmailAddress() {
@@ -74,6 +83,7 @@ public class Client {
     }
 
     /**
+     * Sets the email address of the client.
      * @param emailAddress the emailAddress to set
      */
     public void setEmailAddress(String emailAddress) {
