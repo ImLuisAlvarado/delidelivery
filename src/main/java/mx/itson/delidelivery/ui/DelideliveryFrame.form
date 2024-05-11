@@ -80,15 +80,19 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                                       <Component id="labelComision" min="-2" max="-2" attributes="0"/>
-                                      <Component id="labelShipping" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="labelIva" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="242" max="-2" attributes="0"/>
-                                      <Component id="labelTotal" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelDiscount" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelTotal" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
+                                  <Component id="labelShipping1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -122,15 +126,24 @@
                           <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="12" max="32767" attributes="0"/>
-                  <Component id="labelSubtotal" min="-2" pref="28" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
+                          <Component id="labelSubtotal" min="-2" pref="28" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelDiscount" min="-2" pref="29" max="-2" attributes="0"/>
+                          <EmptySpace pref="11" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="labelIva" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                       <Component id="labelTotal" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="labelShipping" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="labelShipping1" min="-2" pref="29" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="labelActionButton" min="-2" pref="34" max="-2" attributes="0"/>
@@ -652,7 +665,7 @@
             <Property name="text" type="java.lang.String" value="Subtotal:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="labelShipping">
+        <Component class="javax.swing.JLabel" name="labelDiscount">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -660,7 +673,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Cobro de env&#xed;o:"/>
+            <Property name="text" type="java.lang.String" value="Descuento: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="labelIva">
@@ -694,6 +707,17 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Comisi&#xf3;n:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="labelShipping1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cobro de env&#xed;o:"/>
           </Properties>
         </Component>
       </SubComponents>

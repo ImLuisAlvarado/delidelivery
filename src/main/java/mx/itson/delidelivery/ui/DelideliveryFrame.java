@@ -15,6 +15,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import mx.itson.delidelivery.entities.Delidelivery;
 import mx.itson.delidelivery.entities.Product;
+import mx.itson.delidelivery.business.Operation;
 /**
  *
  * @author HP
@@ -67,10 +68,11 @@ public class DelideliveryFrame extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         labelSubtotal = new javax.swing.JLabel();
-        labelShipping = new javax.swing.JLabel();
+        labelDiscount = new javax.swing.JLabel();
         labelIva = new javax.swing.JLabel();
         labelTotal = new javax.swing.JLabel();
         labelComision = new javax.swing.JLabel();
+        labelShipping1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -332,9 +334,9 @@ public class DelideliveryFrame extends javax.swing.JFrame {
         labelSubtotal.setForeground(new java.awt.Color(0, 0, 0));
         labelSubtotal.setText("Subtotal:");
 
-        labelShipping.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labelShipping.setForeground(new java.awt.Color(0, 0, 0));
-        labelShipping.setText("Cobro de envío:");
+        labelDiscount.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelDiscount.setForeground(new java.awt.Color(0, 0, 0));
+        labelDiscount.setText("Descuento: ");
 
         labelIva.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelIva.setForeground(new java.awt.Color(0, 0, 0));
@@ -347,6 +349,10 @@ public class DelideliveryFrame extends javax.swing.JFrame {
         labelComision.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelComision.setForeground(new java.awt.Color(0, 0, 0));
         labelComision.setText("Comisión:");
+
+        labelShipping1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelShipping1.setForeground(new java.awt.Color(0, 0, 0));
+        labelShipping1.setText("Cobro de envío:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -379,13 +385,16 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(128, 128, 128)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(labelComision)
-                                    .addComponent(labelShipping))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(49, 49, 49)
+                                    .addComponent(labelComision))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(labelIva)
                                     .addGap(242, 242, 242)
-                                    .addComponent(labelTotal))))))
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(labelDiscount)
+                                        .addComponent(labelTotal)))
+                                .addComponent(labelShipping1)))))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -409,14 +418,20 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(labelSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(labelSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(labelDiscount, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelIva, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelShipping, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelShipping1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelActionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -481,20 +496,23 @@ public class DelideliveryFrame extends javax.swing.JFrame {
               model.addColumn("PRECIO");
               model.addColumn("TOTAL");
               
+              
               for(Product p : delidelivery.getOrder().getProduct()){
                   model.addRow(new Object[]{
                       
                       p.getName(),
                       p.getQuantity(),
-                      p.getPrice()
+                      Operation.discount(p.isDiscountTicket(), p.getQuantity(), p.getPrice()),
+                      Operation.productTotal(Operation.discount(p.isDiscountTicket(), p.getQuantity(), p.getPrice()), p.getQuantity())
                   });
               }
+              //this block is used to resize to table so it can match the 
+              //content
               productsTable.setAutoResizeMode(JTable.AUTO_RESIZE_NEXT_COLUMN);
               TableColumnModel columnModel=productsTable.getColumnModel();
               columnModel.getColumn(0).setPreferredWidth(150);
               columnModel.getColumn(1).setPreferredWidth(80);
-              
-            
+               
             
             }}catch(Exception ex){
                     System.err.println("Ocurrió un error: "+ex.getMessage());
@@ -566,11 +584,12 @@ public class DelideliveryFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelClientPhoneNumber;
     private javax.swing.JLabel labelComision;
     private javax.swing.JLabel labelDate;
+    private javax.swing.JLabel labelDiscount;
     private javax.swing.JLabel labelIva;
     private javax.swing.JLabel labelOrderId;
     private javax.swing.JLabel labelOrderStatus;
     private javax.swing.JLabel labelPayMethod;
-    private javax.swing.JLabel labelShipping;
+    private javax.swing.JLabel labelShipping1;
     private javax.swing.JLabel labelSubtotal;
     private javax.swing.JLabel labelTotal;
     private javax.swing.JTable productsTable;
