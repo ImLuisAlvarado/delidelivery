@@ -5,12 +5,13 @@
 package mx.itson.delidelivery.entities;
 
 /**
- *
+ * Represents a product entity
  * @author darkheaven
  */
 public class Product {
 
     /**
+     * Gets the name of the product.
      * @return the name
      */
     public String getName() {
@@ -18,6 +19,7 @@ public class Product {
     }
 
     /**
+     * Sets the name of the product.
      * @param name the name to set
      */
     public void setName(String name) {
@@ -25,6 +27,7 @@ public class Product {
     }
 
     /**
+     * Gets the quantity of the product.
      * @return the quantity
      */
     public int getQuantity() {
@@ -32,6 +35,7 @@ public class Product {
     }
 
     /**
+     * Sets the quantity of the product.
      * @param quantity the quantity to set
      */
     public void setQuantity(int quantity) {
@@ -39,6 +43,7 @@ public class Product {
     }
 
     /**
+     * Gets the price of the product.
      * @return the price
      */
     public double getPrice() {
@@ -46,6 +51,7 @@ public class Product {
     }
 
     /**
+     * Sets the price of the products.
      * @param price the price to set
      */
     public void setPrice(double price) {

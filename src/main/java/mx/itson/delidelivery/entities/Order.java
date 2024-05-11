@@ -7,7 +7,9 @@ import java.util.Date;
 import java.util.List;
 
 /**
- *
+ * Represents an order entity. 
+ * An order contains information about products acquired, payment method, and status.
+ * Each order is uniquely identified by an ID.
  * @author darkheaven
  */
 public class Order {
@@ -34,6 +36,7 @@ public class Order {
     }
 
     /**
+     * Sets the payment method of the order.
      * @param payMethod the payMethod to set
      */
     public void setPayMethod(String payMethod) {
@@ -41,6 +44,8 @@ public class Order {
     }
 
     /**
+     * Gets the list of products acquired in the order.
+     * 
      * @return the productsAcquired
      */
     public List<Product> getProductsAcquired() {
@@ -48,6 +53,7 @@ public class Order {
     }
 
     /**
+     * Sets the list of products acquired in the order.
      * @param productsAcquired the productsAcquired to set
      */
     public void setProductsAcquired(List<Product> productsAcquired) {
@@ -55,6 +61,7 @@ public class Order {
     }
 
     /**
+     * Gets the ID of the order.
      * @return the id
      */
     public String getId() {
@@ -62,6 +69,7 @@ public class Order {
     }
 
     /**
+     * Sets the ID of the order.
      * @param id the id to set
      */
     public void setId(String id) {
@@ -69,6 +77,7 @@ public class Order {
     }
 
     /**
+     * Gets the status of the order.
      * @return the status
      */
     public String getStatus() {
@@ -76,6 +85,7 @@ public class Order {
     }
 
     /**
+     * Sets the status of the order.
      * @param status the status to set
      */
     public void setStatus(String status) {

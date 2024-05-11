@@ -22,13 +22,13 @@
         {
             "name":"Stacker Over-Flow",
             "quantity":1,
-            "price":"115.90"
+            "price":115.90
         }
     ],
     "order":
     {
         "id":"6U5K21E12L5C8E1",
-        "date":"2024-05-15T11:40:43.511Z",
+        "date":"2024-05-15T18:40:43.511Z",
         "payMethod":"Efectivo",
         "status":"Pendiente"
     }

@@ -7,12 +7,18 @@ package mx.itson.delidelivery.entities;
 import com.google.gson.Gson;
 
 /**
- *
+ * Represent a Delidelivery entity.
+ * 
+ * Delidelivery is a class that encapsulates information about a delivery order.
+ * It contains references to the business, client, and order associated with the delivery.
+ * It also provides functionality to deserialize JSON data into Delidelivery objects.
+ * 
  * @author darkheaven
  */
 public class Delidelivery {
 
     /**
+     * Gets the business associated with the delivery.
      * @return the business
      */
     public Business getBusiness() {
@@ -20,6 +26,7 @@ public class Delidelivery {
     }
 
     /**
+     * Sets the business associated with the delivery.
      * @param business the business to set
      */
     public void setBusiness(Business business) {
@@ -27,6 +34,7 @@ public class Delidelivery {
     }
 
     /**
+     * Gets the client associated with the delivery.
      * @return the client
      */
     public Client getClient() {
@@ -34,6 +42,7 @@ public class Delidelivery {
     }
 
     /**
+     * Sets the client associated with the delivery.
      * @param client the client to set
      */
     public void setClient(Client client) {
@@ -41,6 +50,7 @@ public class Delidelivery {
     }
 
     /**
+     * Gets the order associated with the delivery.
      * @return the order
      */
     public Order getOrder() {
@@ -48,6 +58,7 @@ public class Delidelivery {
     }
 
     /**
+     * Sets the order associated with the delivery.
      * @param order the order to set
      */
     public void setOrder(Order order) {
@@ -57,7 +68,11 @@ public class Delidelivery {
     private Client client;
     private Order order;
     
-    
+     /**
+     * Deserializes a JSON string into a Delidelivery object.
+     * @param json the JSON string to deserialize
+     * @return the deserialized Delidelivery object
+     **/
     public Delidelivery deserialize (String json){
         Delidelivery delidelivery = new Delidelivery();
         try{
