@@ -10,7 +10,11 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import javax.swing.JFileChooser;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
 import mx.itson.delidelivery.entities.Delidelivery;
+import mx.itson.delidelivery.entities.Product;
 /**
  *
  * @author HP
@@ -248,7 +252,7 @@ public class DelideliveryFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "PRODUCT", "QUANTITY", "PRICE", "TOTAL"
+                "PRODUCTO", "CANTIDAD", "PRECIO", "TOTAL"
             }
         ));
         productsTable.setGridColor(new java.awt.Color(12, 68, 172));
@@ -354,22 +358,21 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(194, 194, 194)
-                                .addComponent(labelActionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(33, 33, 33)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
-                                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(labelActionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGap(33, 33, 33)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
+                                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(117, 117, 117)
                             .addComponent(labelSubtotal))
@@ -455,11 +458,13 @@ public class DelideliveryFrame extends javax.swing.JFrame {
               labelBusinessPhoneNumber.setText("TELEFONO: "+delidelivery.getBusiness().getPhoneNumber());
               labelBusinessEmailAddress.setText("CORREO: "+delidelivery.getBusiness().getEmailAddress());
               
+              
               labelClientName.setText("NOMBRE: "+delidelivery.getClient().getName());
               labelClientAddress.setText("DIRECCIÓN: "+delidelivery.getClient().getAddress());
               labelClientAddressReferences.setText("REFERENCIAS: "+delidelivery.getClient().getAddressReferences());
               labelClientPhoneNumber.setText("TELEFONO: "+delidelivery.getClient().getPhoneNumber());
               labelClientEmailAddress.setText("CORREO: "+delidelivery.getClient().getEmailAddress());
+              
               
               labelOrderId.setText("ID: "+delidelivery.getOrder().getId());
               //this will help us to give a format to hour date
@@ -467,8 +472,28 @@ public class DelideliveryFrame extends javax.swing.JFrame {
               //in here we used the "format" method so our date could be in the SimpleDateFormat
               labelDate.setText("FECHA: "+dateFormat.format(delidelivery.getOrder().getDate()));
               labelPayMethod.setText("METODO DE PAGO: "+delidelivery.getOrder().getPayMethod());
-              labelOrderStatus.setText("ESTADO: "+delidelivery.getOrder().getStatus());         
-             
+              labelOrderStatus.setText("ESTADO: "+delidelivery.getOrder().getStatus());        
+              
+              DefaultTableModel model = (DefaultTableModel)productsTable.getModel();
+              model.setColumnCount(0);
+              model.addColumn("PRODUCTO");
+              model.addColumn("CANTIDAD");
+              model.addColumn("PRECIO");
+              model.addColumn("TOTAL");
+              
+              for(Product p : delidelivery.getOrder().getProduct()){
+                  model.addRow(new Object[]{
+                      
+                      p.getName(),
+                      p.getQuantity(),
+                      p.getPrice()
+                  });
+              }
+              productsTable.setAutoResizeMode(JTable.AUTO_RESIZE_NEXT_COLUMN);
+              TableColumnModel columnModel=productsTable.getColumnModel();
+              columnModel.getColumn(0).setPreferredWidth(150);
+              columnModel.getColumn(1).setPreferredWidth(80);
+              
             
             
             }}catch(Exception ex){

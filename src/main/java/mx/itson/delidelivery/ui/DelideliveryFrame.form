@@ -53,24 +53,23 @@
                           <Component id="jPanel2" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
-                                  <Component id="labelActionButton" min="-2" pref="183" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jPanel7" max="32767" attributes="0"/>
-                                      <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jPanel8" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane1" alignment="0" pref="431" max="32767" attributes="0"/>
-                                      <Component id="jPanel6" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="labelActionButton" alignment="1" min="-2" pref="183" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jPanel7" max="32767" attributes="0"/>
+                                          <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jPanel8" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane1" alignment="0" pref="431" max="32767" attributes="0"/>
+                                          <Component id="jPanel6" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
@@ -474,9 +473,9 @@
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="4" rowCount="0">
-                    <Column editable="true" title="PRODUCT" type="java.lang.Object"/>
-                    <Column editable="true" title="QUANTITY" type="java.lang.Object"/>
-                    <Column editable="true" title="PRICE" type="java.lang.Object"/>
+                    <Column editable="true" title="PRODUCTO" type="java.lang.Object"/>
+                    <Column editable="true" title="CANTIDAD" type="java.lang.Object"/>
+                    <Column editable="true" title="PRECIO" type="java.lang.Object"/>
                     <Column editable="true" title="TOTAL" type="java.lang.Object"/>
                   </Table>
                 </Property>
