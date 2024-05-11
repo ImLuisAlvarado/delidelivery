@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package mx.itson.delidelivery.entities;
-
 import java.util.Date;
 import java.util.List;
 
@@ -12,6 +11,20 @@ import java.util.List;
  * @author darkheaven
  */
 public class Order {
+
+    /**
+     * @return the date
+     */
+    public Date getDate() {
+        return date;
+    }
+
+    /**
+     * @param date the date to set
+     */
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     /**
      * @return the payMethod
@@ -69,8 +82,9 @@ public class Order {
         this.status = status;
     }
     private String id;
-    public Date date;
+    private Date date;
     private List<Product> productsAcquired;
     private String payMethod;
     private String status;
+
 }
