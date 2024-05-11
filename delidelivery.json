@@ -12,13 +12,7 @@
         "phoneNumber":"+52 631 123 9151",
         "emailAddress":"jerry.jamaica240502@potros.itson.edu.mx"
     },
-    "order":
-    {
-        "id":"6U5K21E12L5C8E1",
-        "date":"2024-05-15T18:40:43.511Z",
-        "payMethod":"Efectivo",
-        "status":"Pendiente",
-           "product":
+    "product":
     [   
         {
             "name":"Double Cowboy Bacon",
@@ -30,3 +24,11 @@
             "quantity":1,
             "price":115.90
         }
+    ],
+    "order":
+    {
+        "id":"6U5K21E12L5C8E1",
+        "date":"2024-05-15T18:40:43.511Z",
+        "payMethod":"Efectivo",
+        "status":"Pendiente"
+}
