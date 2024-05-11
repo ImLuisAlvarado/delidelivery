@@ -67,24 +67,9 @@ public class Business {
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
-
-    /**
-     * @return the date
-     */
-    public Date getDate() {
-        return date;
-    }
-
-    /**
-     * @param date the date to set
-     */
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
+    
     private String name;
     private String address;
     private String phoneNumber;
     private String emailAddress;
-    private Date date;
     }
