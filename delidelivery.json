@@ -29,7 +29,7 @@
         {
             "name":"Stacker Over-Flow",
             "quantity":1,
-            "price":115.90
+            "price":115.90,
             "discountTicket":false
         }
     ]}}
