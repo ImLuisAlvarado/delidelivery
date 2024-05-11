@@ -48,16 +48,16 @@ public class Order {
      * 
      * @return the productsAcquired
      */
-    public List<Product> getProductsAcquired() {
-        return productsAcquired;
+    public List<Product> getProduct() {
+        return product;
     }
 
     /**
      * Sets the list of products acquired in the order.
      * @param productsAcquired the productsAcquired to set
      */
-    public void setProductsAcquired(List<Product> productsAcquired) {
-        this.productsAcquired = productsAcquired;
+    public void setProduct(List<Product> productsAcquired) {
+        this.product = product;
     }
 
     /**
@@ -93,7 +93,7 @@ public class Order {
     }
     private String id;
     private Date date;
-    private List<Product> productsAcquired;
+    private List<Product> product;
     private String payMethod;
     private String status;
 
