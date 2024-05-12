@@ -502,8 +502,8 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                       
                       p.getName(),
                       p.getQuantity(),
-                      Operation.discount(p.isDiscountTicket(), p.getQuantity(), p.getPrice()),
-                      Operation.productTotal(Operation.discount(p.isDiscountTicket(), p.getQuantity(), p.getPrice()), p.getQuantity())
+                      //Operation.discount(p.isDiscountTicket(), p.getQuantity(), p.getPrice()),
+                      //Operation.productTotal(Operation.discount(p.isDiscountTicket(), p.getQuantity(), p.getPrice()), p.getQuantity())
                   });
               }
               //this block is used to resize to table so it can match the 
