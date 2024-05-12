@@ -23,11 +23,13 @@
         {
             "name":"Double Cowboy Bacon",
             "quantity":2,
-            "price":138.90
+            "price":138.90,
+            "discountTicket":true
         },
         {
             "name":"Stacker Over-Flow",
             "quantity":1,
-            "price":115.90
+            "price":115.90,
+            "discountTicket":false
         }
     ]}}
