@@ -9,7 +9,18 @@ package mx.itson.delidelivery.business;
  * @author Aurelio
  */
 public class Operation {
-    //int quantity
+    
+    public static double discount(boolean discountTicket, double price){
+        double productSubtotal = discountTicket ? (price)-(price * 0.20) : price;
+        return productSubtotal;
+    }
+    public static double productTotal(double productSubtotal, int quantity){
+        return productSubtotal*quantity;
+    }
+    public static double comision(double subtotal){
+        return subtotal*0.5;
+    }
+//int quantity
     //String productName
     //double productPrice
     //
