@@ -14,6 +14,9 @@ public class Operation {
         double productSubtotal = discountTicket ? (price)-(price * 0.20) : price;
         return productSubtotal;
     }
+    //public static double total(double subtotal){
+    //    return productSubtotal * .16;
+    //}
     public static double productTotal(double productSubtotal, int quantity){
         return productSubtotal*quantity;
     }
