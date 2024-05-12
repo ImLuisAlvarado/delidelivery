@@ -11,6 +11,20 @@ package mx.itson.delidelivery.entities;
 public class Product {
 
     /**
+     * @return the discountTicket
+     */
+    public boolean isDiscountTicket() {
+        return discountTicket;
+    }
+
+    /**
+     * @param discountTicket the discountTicket to set
+     */
+    public void setDiscountTicket(boolean discountTicket) {
+        this.discountTicket = discountTicket;
+    }
+
+    /**
      * Gets the name of the product.
      * @return the name
      */
@@ -60,4 +74,5 @@ public class Product {
     private String name;
     private int quantity;
     private double price;
+    private boolean discountTicket;
 }

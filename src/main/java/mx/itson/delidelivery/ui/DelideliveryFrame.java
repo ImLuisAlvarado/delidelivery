@@ -14,6 +14,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import mx.itson.delidelivery.entities.*;
+import mx.itson.delidelivery.business.Operation;
 /**
  *
  * @author HP
@@ -432,14 +433,15 @@ public class DelideliveryFrame extends javax.swing.JFrame {
               model.addColumn("PRECIO");
               model.addColumn("TOTAL");
               
-              
+              double subtotal=0;
               for(Product p : delidelivery.getOrder().getProduct()){
-                  model.addRow(new Object[]{
-                      
+                  
+                  subtotal += Operation.productTotal(Operation.discount(p.isDiscountTicket(), p.getPrice()), p.getQuantity());
+                  model.addRow(new Object[]{    
                       p.getName(),
                       p.getQuantity(),
-                      //Operation.discount(p.isDiscountTicket(), p.getQuantity(), p.getPrice()),
-                      //Operation.productTotal(Operation.discount(p.isDiscountTicket(), p.getQuantity(), p.getPrice()), p.getQuantity())
+                      Operation.discount(p.isDiscountTicket(), p.getPrice()),
+                      Operation.productTotal(Operation.discount(p.isDiscountTicket(), p.getPrice()), p.getQuantity())
                   });
               }
               //this block is used to resize to table so it can match the 
