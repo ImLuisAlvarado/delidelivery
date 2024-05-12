@@ -13,9 +13,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
-import mx.itson.delidelivery.entities.Delidelivery;
-import mx.itson.delidelivery.entities.Product;
-import mx.itson.delidelivery.business.Operation;
+import mx.itson.delidelivery.entities.*;
 /**
  *
  * @author HP
@@ -106,6 +104,8 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel1.add(jPanel2);
+
         jPanel3.setBackground(new java.awt.Color(225, 224, 224));
 
         labelBusinessName.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -151,6 +151,8 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel1.add(jPanel3);
+
         jPanel4.setBackground(new java.awt.Color(225, 224, 224));
 
         labelOrderStatus.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -195,6 +197,8 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                 .addComponent(labelOrderStatus)
                 .addContainerGap())
         );
+
+        jPanel1.add(jPanel4);
 
         jPanel5.setBackground(new java.awt.Color(225, 224, 224));
 
@@ -248,6 +252,8 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
+        jPanel1.add(jPanel5);
+
         productsTable.setBackground(new java.awt.Color(225, 224, 224));
         productsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -260,6 +266,8 @@ public class DelideliveryFrame extends javax.swing.JFrame {
         productsTable.setGridColor(new java.awt.Color(12, 68, 172));
         jScrollPane1.setViewportView(productsTable);
 
+        jPanel1.add(jScrollPane1);
+
         labelActionButton.setBackground(new java.awt.Color(12, 68, 172));
         labelActionButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         labelActionButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -269,6 +277,7 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                 labelActionButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(labelActionButton);
 
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -290,6 +299,8 @@ public class DelideliveryFrame extends javax.swing.JFrame {
             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
 
+        jPanel1.add(jPanel6);
+
         jPanel7.setBackground(new java.awt.Color(12, 68, 172));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
@@ -309,6 +320,8 @@ public class DelideliveryFrame extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
+
+        jPanel1.add(jPanel7);
 
         jPanel8.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -330,112 +343,37 @@ public class DelideliveryFrame extends javax.swing.JFrame {
             .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
 
+        jPanel1.add(jPanel8);
+
         labelSubtotal.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelSubtotal.setForeground(new java.awt.Color(0, 0, 0));
         labelSubtotal.setText("Subtotal:");
+        jPanel1.add(labelSubtotal);
 
         labelDiscount.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelDiscount.setForeground(new java.awt.Color(0, 0, 0));
         labelDiscount.setText("Descuento: ");
+        jPanel1.add(labelDiscount);
 
         labelIva.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelIva.setForeground(new java.awt.Color(0, 0, 0));
         labelIva.setText("IVA:");
+        jPanel1.add(labelIva);
 
         labelTotal.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         labelTotal.setForeground(new java.awt.Color(0, 0, 0));
         labelTotal.setText("TOTAL:");
+        jPanel1.add(labelTotal);
 
         labelComision.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelComision.setForeground(new java.awt.Color(0, 0, 0));
         labelComision.setText("Comisión:");
+        jPanel1.add(labelComision);
 
         labelShipping1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         labelShipping1.setForeground(new java.awt.Color(0, 0, 0));
         labelShipping1.setText("Cobro de envío:");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(labelActionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGap(33, 33, 33)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
-                                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(117, 117, 117)
-                            .addComponent(labelSubtotal))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(128, 128, 128)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(49, 49, 49)
-                                    .addComponent(labelComision))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(labelIva)
-                                    .addGap(242, 242, 242)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(labelDiscount)
-                                        .addComponent(labelTotal)))
-                                .addComponent(labelShipping1)))))
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                        .addComponent(labelSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelDiscount, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelIva, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelShipping1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelActionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelComision, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelDiscount)
-                .addContainerGap(47, Short.MAX_VALUE))
-        );
+        jPanel1.add(labelShipping1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
