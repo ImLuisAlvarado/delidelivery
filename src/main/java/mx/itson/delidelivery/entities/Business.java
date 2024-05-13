@@ -4,7 +4,6 @@
 
 package mx.itson.delidelivery.entities;
 
-import java.util.Date;
 
 /**
  * Represent a business entity

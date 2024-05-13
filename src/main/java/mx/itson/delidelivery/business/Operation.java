@@ -10,6 +10,7 @@ package mx.itson.delidelivery.business;
  */
 public class Operation {
     
+    
     /**
      * 
      * @param discountTicket = Determine if the customer has a discount coupon.
@@ -20,6 +21,7 @@ public class Operation {
         double productSubtotal = discountTicket ? (price)-(price * 0.20) : price;
         return productSubtotal;
     }
+   
     
     /**
      * 
@@ -27,7 +29,7 @@ public class Operation {
      * @param shippingPrice = The cost of the shipping.
      * @return = The cost our customer has to pay accord to the distance our delivery driver has to travel.
      */
-    public static double shipping(int distance, int shippingPrice){
+    public static int shipping(int distance, int shippingPrice){
         if (distance < 5){
             return shippingPrice = 25;
         } else if (distance >= 5 && distance <7){
@@ -44,6 +46,7 @@ public class Operation {
             return shippingPrice = 10000000;}  
         }
     
+    
     /**
      * 
      * @param subtotal = The cost of the products after discounts.
@@ -54,6 +57,7 @@ public class Operation {
        return subtotal + iva + shipping;
     }
     
+    
     /**
      * 
      * @param subtotal = The cost of the products after discounts.
@@ -63,6 +67,7 @@ public class Operation {
         return subtotal * .16;
     }
 
+    
     /**
      * 
      * @param productSubtotal = The price of the product after discount.
@@ -72,14 +77,17 @@ public class Operation {
     public static double productTotal(double productSubtotal, int quantity){
         return productSubtotal*quantity;
     }
+    
+    
     /**
      * @param discountTicket = Determine if the customer has a discount coupon.
      * @param price = The price of the product.
      * @return = The price of the product multiplying the percentage of the discount = (The discount amount).
      */
-    public static double discountAmount(boolean discountTicket, double price){
-        return discountTicket ? price * .20 : 0;
+    public static double discountAmount(boolean discountTicket, double price, int quantity){
+        return discountTicket ? (price * quantity)* .20 : 0;
     }
+    
     
     /**
      * 
