@@ -1,0 +1,36 @@
+{
+    "business":{
+        "name":"",
+        "address":"",
+        "phoneNumber":"+52 ",
+        "emailAddress":""
+    },
+    "client":{
+        "name":"",
+        "address":"",
+        "addressReferences":"",
+        "phoneNumber":"+52 ",
+        "emailAddress":""
+    },
+    "order":
+    {
+        "id":"M5D5B5S22N4O7O17I27ZA",
+        "date":"2024-05-15T16:40:43.511Z",
+        "payMethod":"Pendiente",
+        "distance": 15,
+        "status":"",
+           "product":
+    [   
+        {
+            "name":"",
+            "quantity":3,
+            "price":120.30,
+            "discountTicket":true
+        },
+        {
+            "name":"",
+            "quantity":2,
+            "price":99.99,
+            "discountTicket":true
+        }
+    ]}}
