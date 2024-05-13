@@ -15,6 +15,22 @@ import java.util.List;
 public class Order {
 
     /**
+     * Gets the distance specified of the order.
+     * @return the distance
+     */
+    public int getDistance() {
+        return distance;
+    }
+
+    /**
+     * Sets the distance method of the order.
+     * @param distance the distance to set
+     */
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
+
+    /**
      * @return the date
      */
     public Date getDate() {
@@ -96,5 +112,6 @@ public class Order {
     private List<Product> product;
     private String payMethod;
     private String status;
+    private int distance;
 
 }
