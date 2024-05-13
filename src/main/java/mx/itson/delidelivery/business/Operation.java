@@ -61,10 +61,10 @@ public class Operation {
     /**
      * 
      * @param subtotal = The cost of the products after discounts.
-     * @return = The taxes(IVA) applied to the subtotal amount of money.
+     * @return = The taxes(IVA) applied to the subtotal amount of money and rounded them with de math.round method.
      */
     public static double iva(double subtotal){
-        return subtotal * .16;
+        return Math.round((subtotal * .16) * 100.0) / 100.0;
     }
 
     

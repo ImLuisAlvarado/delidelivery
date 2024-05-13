@@ -511,12 +511,12 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                 columnModel.getColumn(0).setPreferredWidth(150);
                 columnModel.getColumn(1).setPreferredWidth(80);
                 
-                labelSubtotal.setText("Subtotal: " + Double.toString(subtotal));
-                labelIva.setText("IVA: " + Double.toString(Operation.iva(subtotal)));
-                labelCommission.setText("Comision: " + Double.toString(Operation.commission(subtotal)));
-                //labelShipping.setText("Cobro de envio: " + Integer.toString(Operation.shipping(distance, shippingPrice)));
-                labelDiscount.setText("Descuento aplicado: " + Double.toString(price));
-                labelTotal.setText("TOTAL: " + Double.toString((subtotal + Operation.iva(subtotal)))); // FALTA AGREGARLE EL COSTO DEL ENVIO (SHIPPING).
+                labelSubtotal.setText("Subtotal: $" + Double.toString(subtotal));
+                labelIva.setText("IVA: $" + Double.toString(Operation.iva(subtotal)));
+                labelCommission.setText("Comision: $" + Double.toString(Operation.commission(subtotal)));
+                //labelShipping.setText("Cobro de envio: $" + Integer.toString(Operation.shipping(distance, shippingPrice)));
+                labelDiscount.setText("Descuento aplicado: $" + Double.toString(price));
+                labelTotal.setText("TOTAL: $" + Double.toString((subtotal + Operation.iva(subtotal)))); // FALTA AGREGARLE EL COSTO DEL ENVIO (SHIPPING).
                 
             }}catch(Exception ex){
                 System.err.println("Ocurrió un error: "+ex.getMessage());
