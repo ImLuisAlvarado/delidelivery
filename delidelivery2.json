@@ -1,20 +1,20 @@
 {
     "business":{
-        "name":"Carlos pequeño",
+        "name":"Burger Queen",
         "address":"Blvd. Agustín García Lopez",
         "phoneNumber":"+52 622 144 7593",
-        "emailAddress":"Carlospequeño@gmail.com"
+        "emailAddress":"Burgerqueen@gmail.com"
     },
     "client":{
         "name":"Kalimba Kadjaly Marichal Ibar",
         "address":"Valle de San German, Guaymas Norte",
         "addressReferences":"Parque junto abarrotes mano derecha",
         "phoneNumber":"+52 622 657 3453",
-        "emailAddress":"jerry.jamaica240502@potros.itson.edu.mx"
+        "emailAddress":"Kalimbakadjalymarichalibar@gmail.com"
     },
     "order":
     {
-        "id":"6U5K21E12L5C8E1",
+        "id":"4R1V5N4R1V5N",
         "date":"2024-05-15T18:40:43.511Z",
         "payMethod":"Efectivo",
         "distance": 13,
@@ -25,24 +25,24 @@
             "name":"Spicy Habanero Wings",
             "quantity":1,
             "price":145.90,
-            "discountTicket":true
+            "discountTicket":false
         },
         {
             "name":"Dairy Queen Blizzard Oreo",
             "quantity":1,
             "price":55.50,
-            "discountTicket":false
+            "discountTicket":true
         },
         {
             "name": "Pizza pepperoni",
             "quantity": "1",
-            "price": "90.00",
+            "price": 90.00,
             "discountTicket":false
         },
         {
             "name": "Coca-cola 3L",
             "quantity": "3",
-            "price": "104.00",
-            "discountTicket":false
+            "price": 104.00,
+            "discountTicket":true
         }
     ]}}
