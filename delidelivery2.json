@@ -1,0 +1,48 @@
+{
+    "business":{
+        "name":"Carlos pequeño",
+        "address":"Blvd. Agustín García Lopez",
+        "phoneNumber":"+52 622 144 7593",
+        "emailAddress":"Carlospequeño@gmail.com"
+    },
+    "client":{
+        "name":"Kalimba Kadjaly Marichal Ibar",
+        "address":"Valle de San German, Guaymas Norte",
+        "addressReferences":"Parque junto abarrotes mano derecha",
+        "phoneNumber":"+52 622 657 3453",
+        "emailAddress":"jerry.jamaica240502@potros.itson.edu.mx"
+    },
+    "order":
+    {
+        "id":"6U5K21E12L5C8E1",
+        "date":"2024-05-15T18:40:43.511Z",
+        "payMethod":"Efectivo",
+        "distance": 13,
+        "status":"Pendiente",
+           "product":
+    [   
+        {
+            "name":"Spicy Habanero Wings",
+            "quantity":1,
+            "price":145.90,
+            "discountTicket":true
+        },
+        {
+            "name":"Dairy Queen Blizzard Oreo",
+            "quantity":1,
+            "price":55.50,
+            "discountTicket":false
+        },
+        {
+            "name": "Pizza pepperoni",
+            "quantity": "1",
+            "price": "90.00",
+            "discountTicket":false
+        },
+        {
+            "name": "Coca-cola 3L",
+            "quantity": "3",
+            "price": "104.00",
+            "discountTicket":false
+        }
+    ]}}
