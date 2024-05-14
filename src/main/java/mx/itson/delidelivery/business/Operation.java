@@ -29,22 +29,15 @@ public class Operation {
      * @param shippingPrice = The cost of the shipping.
      * @return = The cost our customer has to pay accord to the distance our delivery driver has to travel.
      */
-    public static int shipping(int distance, int shippingPrice){
-        if (distance < 5){
-            return shippingPrice = 25;
-        } else if (distance >= 5 && distance <7){
-            return shippingPrice = 35;
-        } else if (distance >= 7 && distance < 9){
-            return shippingPrice = 55;
-        } else if (distance >= 9 && distance <11){
-            return shippingPrice = 75;
-        } else if (distance >= 11 && distance < 13){
-            return shippingPrice = 95;
-        } else if (distance >= 13 && distance < 15){
-            return shippingPrice = 120;
-        }else{
-            return shippingPrice = 10000000;}  
+    public static int shipping(int distance){
+        int distances[]={5,7,9,10,20,25};
+        int shippingPrice[] = {25,35,55,75,95,120};
+        for(int i = 0; i<distances.length; i++){
+        if(distance <=distances[i]){
+            return shippingPrice[i];
         }
+    }return 500;
+    }
     
     
     
@@ -96,7 +89,7 @@ public class Operation {
      * @return = The total that we as a company receive.
      */
     public static double commission(double subtotal){
-        return subtotal*0.5;
+        return subtotal*0.15;
     }
 }
 
