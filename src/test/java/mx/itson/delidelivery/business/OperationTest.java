@@ -44,7 +44,7 @@ public class OperationTest {
     public void testSubtotal() {
         System.out.println("subtotal");
         boolean discountTicket = false;
-        double price = 100.0;
+        double price = 100.0; 
         double expResult = 100.0;
         double result = Operation.subtotal(discountTicket, price);
         assertEquals(expResult, result, 0.0);
