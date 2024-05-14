@@ -47,6 +47,7 @@ public class Operation {
         }
     
     
+    
     /**
      * 
      * @param subtotal = The cost of the products after discounts.

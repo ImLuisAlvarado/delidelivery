@@ -4,6 +4,7 @@
  */
 package mx.itson.delidelivery.ui;
 
+
 import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -494,9 +495,13 @@ public class DelideliveryFrame extends javax.swing.JFrame {
 
                 double subtotal=0;
                 double price = 0; 
+                int distance = 0;
+                int shippingPrice = 0;
                 for(Product p : delidelivery.getOrder().getProduct()){
                     subtotal += Operation.productTotal(Operation.subtotal(p.isDiscountTicket(), p.getPrice()), p.getQuantity());
                     price += Operation.discountAmount(p.isDiscountTicket(), p.getPrice(), p.getQuantity());
+                    distance = delidelivery.getOrder().getDistance();
+                    
                     model.addRow(new Object[]{
                         p.getName(),
                         p.getQuantity(),
@@ -504,6 +509,8 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                         Operation.productTotal(Operation.subtotal(p.isDiscountTicket(), p.getPrice()), p.getQuantity())
                     });
                 }
+                
+              
                 //this block is used to resize to table so it can match the
                 //content
                 productsTable.setAutoResizeMode(JTable.AUTO_RESIZE_NEXT_COLUMN);
@@ -511,12 +518,20 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                 columnModel.getColumn(0).setPreferredWidth(150);
                 columnModel.getColumn(1).setPreferredWidth(80);
                 
+                
                 labelSubtotal.setText("Subtotal: $" + Double.toString(subtotal));
                 labelIva.setText("IVA: $" + Double.toString(Operation.iva(subtotal)));
                 labelCommission.setText("Comision: $" + Double.toString(Operation.commission(subtotal)));
-                //labelShipping.setText("Cobro de envio: $" + Integer.toString(Operation.shipping(distance, shippingPrice)));
+                
+                int shippingCost = Operation.shipping(distance, shippingPrice);
+     
+                labelShipping.setText("Cobro de envio: $" + Integer.toString(shippingCost));
                 labelDiscount.setText("Descuento aplicado: $" + Double.toString(price));
-                labelTotal.setText("TOTAL: $" + Double.toString((subtotal + Operation.iva(subtotal)))); // FALTA AGREGARLE EL COSTO DEL ENVIO (SHIPPING).
+                
+                double total = subtotal + Operation.iva(subtotal) + Operation.commission(subtotal) + shippingCost;
+                labelTotal.setText("TOTAL: $" + Double.toString(total));
+  
+                
                 
             }}catch(Exception ex){
                 System.err.println("Ocurrió un error: "+ex.getMessage());
