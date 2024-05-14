@@ -526,6 +526,7 @@ public class DelideliveryFrame extends javax.swing.JFrame {
                 columnModel.getColumn(1).setPreferredWidth(80);
                 
                 
+                //this block is used to determine the total price incluidig shipping
                 labelSubtotal.setText("Subtotal: $" + Double.toString(subtotal));
                 labelIva.setText("IVA: $" + Double.toString(Operation.iva(subtotal)));
                 labelCommission.setText("Comision: $" + Double.toString(Operation.commission(subtotal)));
