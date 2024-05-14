@@ -11,6 +11,7 @@ package mx.itson.delidelivery.entities;
 public class Product {
 
     /**
+     * Indicates whether the product has a discount ticket.
      * @return the discountTicket
      */
     public boolean isDiscountTicket() {
@@ -18,13 +19,14 @@ public class Product {
     }
 
     /**
+     * Sets whether the product has a discount ticket.
      * @param discountTicket the discountTicket to set
      */
     public void setDiscountTicket(boolean discountTicket) {
         this.discountTicket = discountTicket;
     }
 
-    /**
+    /** 
      * Gets the name of the product.
      * @return the name
      */
