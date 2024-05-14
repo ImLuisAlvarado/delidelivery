@@ -20,7 +20,7 @@ import mx.itson.delidelivery.entities.Delidelivery;
 import mx.itson.delidelivery.entities.Product;
 
 /**
- *
+ * Frame dedicated to display esential information of the order. 
  * @author HP
  */
 public class DelideliveryFrame extends javax.swing.JFrame {
