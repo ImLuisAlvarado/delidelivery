@@ -1,36 +1,48 @@
 {
     "business":{
-        "name":"",
-        "address":"",
-        "phoneNumber":"+52 ",
-        "emailAddress":""
+        "name" : "Burbanos Bar",
+        "address" : "Calle del paraje 15, Las Villas",
+        "phoneNumber" : "+52 622 137 3737",
+        "emailAddress" : "burbanosfood@gmail.com"
     },
     "client":{
-        "name":"",
-        "address":"",
-        "addressReferences":"",
-        "phoneNumber":"+52 ",
-        "emailAddress":""
+        "name" : "Dahir",
+        "address" : "Circunvalación San Juan Este 124, San Carlos",
+        "addressReferences" : "En el Mariscos el Rey, dejar en caja porfa",
+        "phoneNumber" : "+52 622 156 6908",
+        "emailAddress" : "dahirxdloluwu7u7@gmail.com"
     },
     "order":
     {
-        "id":"M5D5B5S22N4O7O17I27ZA",
-        "date":"2024-05-15T16:40:43.511Z",
-        "payMethod":"Pendiente",
-        "distance": 15,
-        "status":"",
-           "product":
+        "id" : "M5D5B5S22N4O7O17I27ZA",
+        "date" : "2024-05-15T16:40:43.511Z",
+        "payMethod" : "Transferencia",
+        "distance" : 15,
+        "status" : "Pendiente",
+           "product" :
     [   
         {
-            "name":"",
-            "quantity":3,
-            "price":120.30,
-            "discountTicket":true
+            "name" : "Boneless Búfalo",
+            "quantity" : 2,
+            "price" : 230.00,
+            "discountTicket" : true
         },
         {
-            "name":"",
-            "quantity":2,
-            "price":99.99,
-            "discountTicket":true
+            "name" : "Sushi 3 Quesos Horneado",
+            "quantity" : 2,
+            "price" : 398.00,
+            "discountTicket" : true
+        },
+        {
+            "name" : "Papas Sazonadas",
+            "quantity" : 1,
+            "price" : 120.00,
+            "discountTicket" : false
+        },
+        {
+            "name" : "Coca-Cola Sabor Original 600ml",
+            "quantity" : 5,
+            "price" : 166.00,
+            "discountTicket" : false
         }
     ]}}
