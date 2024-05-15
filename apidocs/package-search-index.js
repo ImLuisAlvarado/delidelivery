@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"mx.itson.delidelivery.business"},{"l":"mx.itson.delidelivery.entities"},{"l":"mx.itson.delidelivery.ui"}]
